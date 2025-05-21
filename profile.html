@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    
+    <div class="navbar">
+        <span class="brand">SoftLine</span>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="login.html">LOGIN</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="profile.php">Profile</a>
+    </div>
+
+    <form class="profile" action="profile.php">
+        <h1>Welcome to Your Profile</h1>
+        <div class="profile-card">
+            <img src="profile-image.jpg" alt="Profile Picture">
+            <h2><?php echo $username; ?></h2>
+            <p>Email: YourEmail@....</p>
+            <p>Bio: This is a brief description about yourself.</p>
+            <button id="signOutButton">Sign Out</button>
+        </div>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // التوجيه تلقائيًا إلى صفحة PHP
+        window.location.href = "profile.php";
+    </script>
+
+    <script src="profile.js"></script>
+</body>
+</html>

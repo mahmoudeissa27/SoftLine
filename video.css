@@ -1,0 +1,60 @@
+/* إعدادات أساسية */
+* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* شريط التنقل */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #fffbfb;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.brand {
+  color: #40E0D0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* تنسيق الفيديوهات */
+.video-cont {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px;
+  height: auto;
+  border: 2px solid #ffffff; /* حواف بيضاء */
+  border-radius: 5px;
+  margin-top: 80px; /* هذا سيبعد الفيديوهات عن شريط التنقل */
+}
+
+video {
+  border-radius: 8px; /* إضافة حواف مستديرة للفيديوهات */
+  max-width: 100%; /* التأكد من أن الفيديوهات لا تتجاوز عرض الحاوية */
+}

@@ -1,0 +1,137 @@
+/* إعدادات عامة للجسم */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* شريط التنقل */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #fffbfb;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.brand {
+    color: #40E0D0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* إعداد الشبكة للبطاقات */
+.zon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* أربعة أعمدة */
+    gap: 20px; /* المسافة بين العناصر */
+    padding: 100px 20px 20px 20px; /* مساحة حول المحتوى */
+    justify-items: center;
+    width: 100%;
+    margin-top: 60px; /* ترك مسافة لشريط التنقل */
+}
+
+.product {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 250px;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.product img {
+    width: 100%; /* تصغير الصورة لتتناسب مع العنصر */
+    border-radius: 10px;
+}
+
+.cart-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(5, 51, 17);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h2 {
+    margin-bottom: 15px;
+}
+/* تصغير حجم الصور في السلة */
+.cart-item-image {
+    width: 50px;  /* تغيير الحجم حسب الحاجة */
+    height: 50px; /* الحفاظ على التناسب بين العرض والارتفاع */
+    object-fit: cover; /* التأكد من تغطية الصورة بشكل مناسب */
+    margin-right: 10px; /* إضافة بعض المسافة بين الصورة والنص */
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid red;
+}
+
+#cart-items li button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#cart-items li button:hover {
+    background-color: #a71d2a;
+}
+
+#total-price {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 أعمدة في الشاشات الصغيرة */
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr; /* عمود واحد في الشاشات الصغيرة جدًا */
+    }
+}

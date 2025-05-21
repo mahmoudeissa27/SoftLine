@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+  <div class="navbar">
+    <span class="brand">SoftLine</span>
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="login.html">LOGIN</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="profile.html">Profile</a>
+</div>
+
+  <div class="modal">
+    <form class="form" id="paymentForm" action="payment.php" method="POST">
+      <div class="credit-card-info--form">
+        <div class="input_container">
+          <label class="input_label" for="cardholder-name">Card holder full name</label>
+          <input
+            placeholder="Enter your full name"
+            title="Input title"
+            name="cardholder_name"
+            type="text"
+            class="input_field"
+            id="cardholder-name"
+            required
+          />
+        </div>
+        <div class="input_container">
+          <label class="input_label" for="card-number">Card Number</label>
+          <input
+            placeholder="0000 0000 0000 0000"
+            title="Card Number"
+            name="card_number"
+            type="text"
+            class="input_field"
+            id="card-number"
+            required
+          />
+        </div>
+        <div class="input_container">
+          <label class="input_label" for="expiry-cvv">Expiry Date / CVV</label>
+          <div class="split">
+            <input
+              placeholder="01/23"
+              title="Expiry Date"
+              name="expiry_date"
+              type="text"
+              class="input_field"
+              id="expiry-date"
+              required
+            />
+            <input
+              placeholder="CVV"
+              title="CVV"
+              name="cvv"
+              type="text"
+              class="input_field"
+              id="cvv"
+              required
+            />
+          </div>
+        </div>
+        <button class="purchase--btn" type="submit">Checkout</button>
+        <div class="separator">
+          <hr class="line" />
+          <p>or pay using e-wallet</p>
+          <hr class="line" />
+        </div>
+        <div class="payment--options">
+          <label><input type="radio" name="payment_method" value="paypal" required> Paypal</label>
+          <label><input type="radio" name="payment_method" value="apple" required> Apple</label>
+          <label><input type="radio" name="payment_method" value="instapay" required> Instapay</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
